@@ -1,5 +1,9 @@
 const http = require('http');
 const port = 3000;
+const write = require('./write');
+
+
+write.writeHelloFile();
 
 const requestHandler = (request, response) => {
   response.end(`Handling a request on port ${port}`)
@@ -14,3 +18,4 @@ server.listen(port, (err) => {
 
   console.log(`server is listening on ${port}`);
 });
+
